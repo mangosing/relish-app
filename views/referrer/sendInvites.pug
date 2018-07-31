@@ -1,0 +1,73 @@
+extends ../base.pug
+
+block content
+  include ../partials/refNavigation.pug
+  div(class="container-fluid")
+    div(class="row")
+      div(class="col-md-6 offset-md-3 mt-4 text-center")
+        div(class="card my-5 py-4 px-3 text-left")
+          form(action="/referrer" method="POST")
+            input(type='hidden' name='_csrf' value=`${csrfToken}`)
+            div(class="form-group")
+              label(for="refEmail") Email:
+              input(type="email" name="refEmail" class="form-control" value=`${refEmail}` readonly="readonly")
+            div(class="form-group")
+              label(for="refLink") My referral link:
+              div(class="form-row")
+                div(class="col-10")
+                  input(type="text" id='refLink' name="refLink" class="form-control" value=`${refLink}` readonly="readonly")
+                div(class="col-2")
+                  p( id="copy" class="form-control btn btn-relish-primary")
+                    i(class="fa fa-copy")
+            //- div(class="form-group")
+            //-   input(type="button" class="form-control btn btn-relish-primary" value="copy link to clipboard")
+            div(class="form-group")
+              label(for="emails") Emails I want to send referrals to:
+              textarea(type="text" name="emails" class="form-control cloudsponge-contacts")
+              div(class='text-right')
+                a(class="cloudsponge-launch") Add from Address Book
+            div(class="form-group")
+              input(type="submit" name="submit" value="submit" class="form-control btn btn-relish-primary")
+      div(class="col-md-6 offset-md-3 mt-4 text-center")
+        h2 My Invitees
+        table(class="table") 
+          thread 
+            if invitees.length
+              tr 
+                th(scope='col') Email
+                th(scope='col') Subscribed?
+            else
+              tr
+                th 
+                  h6 Ooops, no invitees yet...
+          tbody
+            -invitees = invitees.sort((a,b) => b.hasPurchased - a.hasPurchased)
+            each invitee in invitees
+              tr
+                td 
+                  p #{invitee.email}
+                if invitee.hasPurchased 
+                  if invitee.latestReferrer === id 
+                    td 
+                      p(class='main' data-toggle="tooltip" data-placement="right" title="Subscribed through you!") YES 
+                  else
+                    td 
+                      p(class='secondary' data-toggle="tooltip" data-placement="right" title="Subscribed through someone else :/") YES
+                else
+                  td 
+                    p Not Yet
+                
+                
+
+  script(src="//api.cloudsponge.com/widget/c40a82226d1f96c36f8e69955063723aaba78697.js")
+  script(type='text/javascript').
+      copy = () => {
+        const copyText = document.querySelector("#refLink");
+        copyText.select();
+        document.execCommand("copy");
+      }
+      document.querySelector("#copy").addEventListener("click", copy);
+  script(type='text/javascript').
+      $(function () {
+        $('p').tooltip()
+      })

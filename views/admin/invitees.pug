@@ -1,0 +1,31 @@
+extends ../base.pug
+
+block content
+  include ../partials/navigation.pug
+  div(class="container-fluid mt-5 justify-content-center")
+    h2(class="text-center") Invitees
+    div(class="col-md-6 offset-md-3 mt-4")
+      table(class="table")
+        thread
+          if allInvitees.length
+            tr
+              th(scope='col') Email
+              th(scope='col') Subscribed?
+              th(scope='col') Latest Referrer
+          else
+            tr
+              th
+                h6 Ooops, no invitees yet...
+        tbody
+          -invitees = allInvitees.sort((a,b) => b.updatedAt - a.updatedAt)
+          each invitee in invitees
+            tr
+              td
+                p #{invitee.email}
+              td
+                if invitee.hasPurchased
+                  p(class="main") YES
+                else
+                  p(class="secondary") NO
+              td
+                p #{invitee.latestReferrer.email}

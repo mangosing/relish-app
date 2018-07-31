@@ -1,0 +1,193 @@
+//Fonts -----------------------------------------
+$main-body-font: 'Open Sans', sans-serif;
+$main-heading-font: 'Abril Fatface', cursive;
+
+//Colors ----------------------------------------
+$primary-red: #ee6352;
+$primary-red-hover: #df5948;
+$secondary-red: #f9b5ac;
+
+$primary-yellow: #fed160;
+$secondary-yellow: #ffe7ad;
+
+$primary-blue: #6699cc;
+$secondary-blue: #aee8ff;
+
+$primary-teal: #9ad8d5;
+$secondary-teal: #d3fdff;
+
+$primary-grey: #665f5e;
+$secondary-grey: #7d7574;
+
+$primary-light-grey: #a0a0a0;
+$secondary-light-grey: #eaeaea;
+
+$main-white: #ffffff;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $main-heading-font;
+}
+
+// Custom Bootstrap --------------------------------
+
+.navbar {
+  background: $primary-red;
+  text-align: center;
+
+  & .nav-link {
+    color: #ffffff;
+  }
+  & .nav-link img {
+    width: auto;
+    height: 7.813rem;
+    display: block;
+  }
+  & a img {
+    width: auto;
+    height: 50px;
+  }
+}
+
+.landing-bg {
+  background: $primary-red;
+  height: 100vh;
+  color: $main-white;
+  text-align: center;
+
+  h1 {
+    font-size: 4em;
+    font-family: $main-heading-font;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.25em;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+}
+
+.landing-logo {
+  margin: 2rem;
+  width: auto;
+  height: 6.25rem;
+}
+
+.btn-relish {
+  background: none;
+  border: 2px solid $main-white;
+  border-radius: 0;
+  color: $main-white;
+  font: $main-body-font;
+  margin: 0.75rem;
+  padding: 0.75rem;
+
+  &:hover {
+    background: $main-white;
+    color: $primary-red;
+  }
+}
+.btn-relish-primary {
+  background: $primary-red;
+  color: $main-white;
+
+  &:hover {
+    background: $primary-red-hover;
+  }
+}
+
+.landing-footer {
+  & div {
+    list-style: none;
+    display: flex;
+  }
+  & div a {
+    color: $primary-red;
+    margin: 2rem 0.5rem;
+    background: $main-white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.6;
+    }
+  }
+}
+
+.relish-alert {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  z-index: 999;
+  width: 100%;
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.main {
+  color: $primary-red;
+}
+
+.secondary {
+  color: $primary-grey;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+.admin-dash-stats h3 {
+  color: $primary-red;
+  font-size: 3rem;
+}
+
+.admin-dash-stats p {
+  font-size: 14px;
+}
+
+.tooltip {
+  width: 120px;
+}
+.tooltip > .tooltip-inner {
+  background-color: $primary-red;
+  color: $main-white;
+  padding: 3px 4px 3px 4px;
+  font-size: 11px;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^='top'] .arrow::before,
+.tooltip.bs-tooltip-top .arrow::before {
+  border-width: 5px 5px 0;
+  border-top-color: $primary-red;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^='right'] .arrow::before,
+.tooltip.bs-tooltip-right .arrow::before {
+  border-width: 5px 5px 5px 0;
+  border-right-color: $primary-red;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-width: 0 5px 5px;
+  border-bottom-color: $primary-red;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^='left'] .arrow::before,
+.tooltip.bs-tooltip-left .arrow::before {
+  border-width: 5px 0 5px 5px;
+  border-left-color: $primary-red;
+}

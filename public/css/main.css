@@ -1,0 +1,160 @@
+/* line 27, public/scss/_settings.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abril Fatface", cursive; }
+
+/* line 38, public/scss/_settings.scss */
+.navbar {
+  background: #ee6352;
+  text-align: center; }
+  /* line 42, public/scss/_settings.scss */
+  .navbar .nav-link {
+    color: #ffffff; }
+  /* line 45, public/scss/_settings.scss */
+  .navbar .nav-link img {
+    width: auto;
+    height: 7.813rem;
+    display: block; }
+  /* line 50, public/scss/_settings.scss */
+  .navbar a img {
+    width: auto;
+    height: 50px; }
+
+/* line 56, public/scss/_settings.scss */
+.landing-bg {
+  background: #ee6352;
+  height: 100vh;
+  color: #ffffff;
+  text-align: center; }
+  /* line 62, public/scss/_settings.scss */
+  .landing-bg h1 {
+    font-size: 4em;
+    font-family: "Abril Fatface", cursive;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem; }
+  /* line 68, public/scss/_settings.scss */
+  .landing-bg p {
+    font-size: 1.25em;
+    font-weight: 300;
+    letter-spacing: 2px; }
+
+/* line 75, public/scss/_settings.scss */
+.landing-logo {
+  margin: 2rem;
+  width: auto;
+  height: 6.25rem; }
+
+/* line 81, public/scss/_settings.scss */
+.btn-relish {
+  background: none;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  font: "Open Sans", sans-serif;
+  margin: 0.75rem;
+  padding: 0.75rem; }
+  /* line 90, public/scss/_settings.scss */
+  .btn-relish:hover {
+    background: #ffffff;
+    color: #ee6352; }
+
+/* line 95, public/scss/_settings.scss */
+.btn-relish-primary {
+  background: #ee6352;
+  color: #ffffff; }
+  /* line 99, public/scss/_settings.scss */
+  .btn-relish-primary:hover {
+    background: #df5948; }
+
+/* line 105, public/scss/_settings.scss */
+.landing-footer div {
+  list-style: none;
+  display: flex; }
+
+/* line 109, public/scss/_settings.scss */
+.landing-footer div a {
+  color: #ee6352;
+  margin: 2rem 0.5rem;
+  background: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  /* line 120, public/scss/_settings.scss */
+  .landing-footer div a:hover {
+    text-decoration: none;
+    opacity: 0.6; }
+
+/* line 127, public/scss/_settings.scss */
+.relish-alert {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  z-index: 999;
+  width: 100%; }
+  /* line 135, public/scss/_settings.scss */
+  .relish-alert p {
+    margin-bottom: 0; }
+
+/* line 140, public/scss/_settings.scss */
+.main {
+  color: #ee6352; }
+
+/* line 144, public/scss/_settings.scss */
+.secondary {
+  color: #665f5e; }
+
+/* line 148, public/scss/_settings.scss */
+.alert {
+  margin-bottom: 0; }
+
+/* line 152, public/scss/_settings.scss */
+.admin-dash-stats h3 {
+  color: #ee6352;
+  font-size: 3rem; }
+
+/* line 157, public/scss/_settings.scss */
+.admin-dash-stats p {
+  font-size: 14px; }
+
+/* line 161, public/scss/_settings.scss */
+.tooltip {
+  width: 120px; }
+
+/* line 164, public/scss/_settings.scss */
+.tooltip > .tooltip-inner {
+  background-color: #ee6352;
+  color: #ffffff;
+  padding: 3px 4px 3px 4px;
+  font-size: 11px; }
+
+/* line 171, public/scss/_settings.scss */
+.tooltip.bs-tooltip-auto[x-placement^='top'] .arrow::before,
+.tooltip.bs-tooltip-top .arrow::before {
+  border-width: 5px 5px 0;
+  border-top-color: #ee6352; }
+
+/* line 177, public/scss/_settings.scss */
+.tooltip.bs-tooltip-auto[x-placement^='right'] .arrow::before,
+.tooltip.bs-tooltip-right .arrow::before {
+  border-width: 5px 5px 5px 0;
+  border-right-color: #ee6352; }
+
+/* line 183, public/scss/_settings.scss */
+.tooltip.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-width: 0 5px 5px;
+  border-bottom-color: #ee6352; }
+
+/* line 189, public/scss/_settings.scss */
+.tooltip.bs-tooltip-auto[x-placement^='left'] .arrow::before,
+.tooltip.bs-tooltip-left .arrow::before {
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ee6352; }

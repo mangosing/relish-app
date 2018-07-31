@@ -1,0 +1,52 @@
+{
+  "name": "relish-app",
+  "version": "1.0.0",
+  "description": "WRITE STUFF HERE",
+  "main": "server.js",
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true public/scss/ -o public/css",
+    "build-task:autoprefixer": "postcss public/css/*.css --use autoprefixer -d public/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'public/scss/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p sass:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rithmschool/relish-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rithmschool/relish-app/issues"
+  },
+  "homepage": "https://github.com/rithmschool/relish-app#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "browser-sync": "^2.23.5",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "csurf": "^1.9.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "gulp-autoprefixer": "^4.1.0",
+    "locus": "^2.0.1",
+    "mandrill-api": "^1.0.45",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-rc.4",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

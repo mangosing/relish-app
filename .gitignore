@@ -1,0 +1,5 @@
+node_modules
+.env
+.eslintrc.json
+.DS_STORE
+prepros-6.config

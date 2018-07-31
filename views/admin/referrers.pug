@@ -1,0 +1,33 @@
+extends ../base.pug
+
+block content 
+  include ../partials/navigation.pug
+  div(class="col-md-6 offset-md-3 mt-4 text-center")
+        h2 Referrers
+        table(class="table") 
+          thread
+            if allReferrers.length
+              tr
+                th(scope='col') Email
+                th(scope='col') Ambassador?
+                th(scope='col') # of Purchases
+                th(scope='col') # of Invitees
+            else
+              tr
+                th 
+                  h6 Ooops, no referrers yet...
+          tbody
+            -referrers = allReferrers.sort((a,b) => b.purchaseCount - a.purchaseCount)
+            each referrer in referrers
+              tr
+                td 
+                  p #{referrer.email}
+                td 
+                  if referrer.isAmbassador
+                    p(class="main") YES
+                  else
+                    p(class="secondary") NO
+                td
+                  p #{referrer.purchaseCount}
+                td
+                  p #{referrer.invitees.length}

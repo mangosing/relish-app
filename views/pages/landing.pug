@@ -1,0 +1,32 @@
+extends ../base.pug
+
+block content
+  div(class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true")
+      div(class="modal-dialog" role="document")
+        div(class="modal-content")
+          div(class="modal-header")
+            h5(class="modal-title" id="emailModalLabel") Enter Email
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close"): span(aria-hidden="true") &times;
+          div(class="modal-body")
+            p Welcome! Confirm your email so you can send referrals!
+            form(action="/" method="POST")
+              input(type='hidden' name='_csrf' value=`${csrfToken}`)
+              div(class="form-group")
+                input(type="text" id="emailInput" name="email" class="form-control mb-2")
+                button(type="submit" class="form-control btn btn-relish-primary") Submit
+  div(class="container-fluid landing-bg d-flex flex-column justify-content-between align-items-center")
+    div
+      a(href="/"): img(img src="/images/relish_logo.png" alt="The Relish Logo" class="landing-logo")
+    section
+      h1 Serving up sports for female fans
+      p Everything trending in the sports world delivered straight to your inbox:
+      button(type="button" data-toggle="modal" data-target="#emailModal" class="btn btn-relish") ENTER EMAIL
+    footer(class="landing-footer")
+      div
+        a(href="https://twitter.com/TheRelishSports" target="_blank"): i(class="fa fa-twitter" aria-hidden="true")
+        a(href="https://medium.com/the-relish" target="_blank"): i(class="fa fa-medium" aria-hidden="true")
+        a(href="https://www.instagram.com/therelishsports/" target="_blank"): i(class="fa fa-instagram" aria-hidden="true")
+        a( href="mailto:hello@therelish.com" target="_blank"): i(class="fa fa-envelope-o" aria-hidden="true")
+        a(href="https://www.facebook.com/TheRelishSports/" target="_blank"): i(class="fa fa-facebook" aria-hidden="true")
+        a(href="https://www.linkedin.com/company/7945346/" target="_blank"): i(class="fa fa-linkedin" aria-hidden="true")
+      

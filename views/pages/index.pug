@@ -1,0 +1,16 @@
+extends ../base.pug
+block content
+
+  include ../partials/navigation.pug
+  div(class="container-fluid")
+    div(class="row")
+      div(class="col-md-6 offset-md-3 mt-4 text-center")
+        h1 Refer your friends!
+        div(class="card my-5 py-4 px-3 text-left")
+          form(action="/" method="POST")
+            h4 Send a referral!
+            input(type='hidden' name='_csrf' value=`${csrfToken}`)
+            div(class="form-group")
+              label(for="email") Email:
+              input(type="email" name="email" class="form-control")
+            input(type="submit" name="submit" value="submit" class=" form-control btn btn-relish-primary")
